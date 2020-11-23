@@ -1,0 +1,26 @@
+##################################################################
+                  DOCKERFILE Template
+##################################################################
+
+# You set a Base Image
+FROM <operating_system>:<version>
+
+MAINTAINER <developer_information>
+
+# You set the workdir for the app
+WORKDIR <path-to-app>
+
+# You set the enviroment variables 
+ENV <key> <value>
+
+# The command 'copy' have to copy all files at the host for exec your app at container
+COPY <source-to-copy> <dest> 
+
+#  Will exec the command that give result for use in the next steps
+RUN <command>
+
+# CMD will provide defaults for executing the container, You can use CMD only once
+CMD <command>
+
+# Container listens on the specific network port(s)
+EXPOSE <port-to-listen>/<protocol>
